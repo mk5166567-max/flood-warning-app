@@ -1,2 +1,8 @@
-# Weather-Forecast-app
-A responsive weather forecast web application that provides real-time weather information for any city worldwide. The app fetches live weather data from a weather API and displays current temperature, humidity, wind speed, weather conditions, and  live data updates  Technologies Used:  HTML5 CSS3 JavaScript Weather API (e.g., OpenWeatherMap)
+# pytest cache directory #
+
+This directory contains data from the pytest's cache plugin,
+which provides the `--lf` and `--ff` options, as well as the `cache` fixture.
+
+**Do not** commit this to version control.
+
+See [the docs](https://docs.pytest.org/en/stable/how-to/cache.html) for more information.
