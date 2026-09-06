@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="weather-card" id="weatherCard">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Weather Forecast</p>
+            <h1>Find the weather anywhere</h1>
+          </div>
+          <button id="locationButton" class="ghost-btn" type="button">Use My Location</button>
+        </header>
+
+        <form id="searchForm" class="search-form">
+          <input
+            id="cityInput"
+            type="text"
+            placeholder="Enter a city or city, country"
+            autocomplete="off"
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <div class="actions-row">
+          <button id="saveFavoriteButton" class="ghost-btn" type="button">Save as Favorite</button>
+        </div>
+
+        <section class="favorites-panel" aria-label="Favorite cities">
+          <div class="favorites-header">
+            <h3>Favorite cities</h3>
+            <p>Saved locally on this device</p>
+          </div>
+          <ul id="favoritesList" class="favorites-list"></ul>
+        </section>
+
+        <p id="statusMessage" class="status-message">Loading default city...</p>
+
+        <section class="weather-display" aria-live="polite">
+          <div class="weather-main">
+            <div class="weather-icon" id="weatherIcon">☀️</div>
+            <div>
+              <h2 id="cityName">-</h2>
+              <p id="weatherCondition" class="weather-condition">-</p>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <span class="stat-label">Temperature</span>
+              <strong id="temperature">--</strong>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">Humidity</span>
+              <strong id="humidity">--</strong>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">Wind</span>
+              <strong id="windSpeed">--</strong>
+            </article>
+          </div>
+
+          <section class="forecast-panel">
+            <div class="forecast-header">
+              <h3>Next 7 days</h3>
+              <p>Daily highs and lows</p>
+            </div>
+            <div id="forecastList" class="forecast-list"></div>
+          </section>
+        </section>
+
+        <p class="developer-credit">Developed by Muhammad Mairaj Khan</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
